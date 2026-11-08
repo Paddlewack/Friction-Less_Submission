@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e1c8c7f22026a744b42698902c03455, type: 3}
+  m_Name: EnemyEmplacementHealthData
+  m_EditorClassIdentifier: Assembly-CSharp::HealthSysData
+  Faction: 1
+  StartingMaxHealth: 100
+  StartingCurrentHealth: 100
+  StartingMaxShield: 0
+  StartingCurrentShield: 0
+  ShieldRechargeTickRate: 1
+  ShieldRechargePerTick: 1
+  ShieldRechargeDelay: 1
+  Armour: 0

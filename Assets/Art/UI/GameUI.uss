@@ -1,0 +1,105 @@
+:root {
+}
+
+.glassContainer {
+    background-color: rgba(15, 31, 48, 0.89);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-width: 4px;
+    border-right-width: 4px;
+    border-bottom-width: 4px;
+    border-left-width: 4px;
+    border-left-color: rgb(0, 122, 255);
+    border-right-color: rgb(0, 122, 255);
+    border-top-color: rgb(0, 122, 255);
+    border-bottom-color: rgb(0, 122, 255);
+}
+
+Label {
+    color: rgb(255, 255, 255);
+}
+
+.h1 {
+    font-size: 22px;
+    -unity-font-style: bold;
+}
+
+.popupDefault {
+    transition-duration: 1.5s;
+    transition-timing-function: ease-in-out;
+    top: 50%;
+    position: absolute;
+    bottom: auto;
+    left: auto;
+    flex-direction: column;
+    right: 1%;
+    translate: 0 -50%;
+    align-items: center;
+    width: auto;
+    height: auto;
+    max-height: none;
+    padding-top: 12px;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    max-width: 320px;
+}
+
+.popupHidden {
+    transition-duration: 1.5s;
+    transition-timing-function: ease-in-out;
+    top: 35%;
+    position: absolute;
+    bottom: auto;
+    left: auto;
+    flex-direction: column;
+    right: -28%;
+    translate: 0 -50%;
+    align-items: center;
+    width: auto;
+    height: auto;
+    max-height: none;
+    padding-top: 12px;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    max-width: 320px;
+}
+
+.hull-bar-bg {
+}
+
+.hull-bar-fill {
+}
+
+.shield-bar-fill {
+}
+
+.shield-bar-bg {
+}
+
+.weapon-container {
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-left-color: rgb(0, 60, 128);
+    border-right-color: rgb(0, 60, 128);
+    border-top-color: rgb(0, 60, 128);
+    border-bottom-color: rgb(0, 60, 128);
+    background-color: rgba(0, 15, 31, 0.02);
+}
+
+.active-weapon {
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-left-color: rgb(0, 122, 255);
+    border-right-color: rgb(0, 122, 255);
+    border-top-color: rgb(0, 122, 255);
+    border-bottom-color: rgb(0, 122, 255);
+    background-color: rgba(0, 61, 128, 0.24);
+}

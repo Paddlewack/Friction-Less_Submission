@@ -1,0 +1,10 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="WeaponContainer-1" style="flex-direction: row; height: 100%; width: 100%; position: relative; align-items: stretch; align-self: auto; align-content: flex-start; max-width: 404px; border-bottom-width: 0;">
+        <ui:Image name="Icon" source="project://database/Assets/Art/UI/Weapon%20Icons/Placeholder-523345509.png?fileID=21300000&amp;guid=0e4e0838fc242ae4bb5398ba309ff74b&amp;type=3#Placeholder-523345509" style="height: 100%; aspect-ratio: 1; width: auto;"/>
+        <ui:VisualElement name="Details" style="flex-grow: 1; flex-direction: column; margin-left: 19px; height: 100%; margin-bottom: 0; justify-content: space-around;">
+            <ui:Label text="Weapon Name" name="Name" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; font-size: 18px; -unity-text-outline-width: 2px; -unity-font-style: bold;"/>
+            <ui:Label text="Ammo: ? / ?" name="Ammo" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; font-size: 18px; color: rgb(255, 255, 255); -unity-text-outline-width: 2px; -unity-font-style: bold; text-overflow: ellipsis;"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="ReloadIndicator" style="flex-grow: 1; width: 100%; height: 100%; position: absolute; bottom: 0%; color: rgb(255, 255, 255); background-color: rgba(99, 114, 132, 0.1); -unity-background-image-tint-color: rgba(255, 255, 255, 0);"/>
+</ui:UXML>

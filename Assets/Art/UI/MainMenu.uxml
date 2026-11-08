@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Art/UI%20TOOLKIT/MainMenu.uss?fileID=7433441132597879392&amp;guid=1b3eecfba88dcd34b9f956a85ad21b5c&amp;type=3#MainMenu"/>
+    <ui:VisualElement name="root" class="root">
+        <ui:Label name="title" text="FRICTION-LESS" class="title"/>
+        <ui:VisualElement name="button-group" class="button-group">
+            <ui:Button name="start-button" text="START GAME" class="menu-button start-button"/>
+            <ui:Button name="exit-button" text="EXIT GAME" class="menu-button exit-button"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

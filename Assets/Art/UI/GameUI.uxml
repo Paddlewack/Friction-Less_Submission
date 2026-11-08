@@ -1,0 +1,48 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="WeaponContainer" src="project://database/Assets/Art/UI/WeaponContainer.uxml?fileID=9197481963319205126&amp;guid=262e153c72f8b34429e97c8e80b98f75&amp;type=3#WeaponContainer"/>
+    <Style src="project://database/Assets/Art/UI/GameUI.uss?fileID=7433441132597879392&amp;guid=8861af401364fb745bba908a31acdba4&amp;type=3#GameUI"/>
+    <ui:VisualElement name="PopupContainer" data-source="project://database/Assets/Scriptable%20Objects/Resources/UI/PopupData/SelectedPopupData.asset?fileID=11400000&amp;guid=6b067cf1bc668a04eb35f02c7133e802&amp;type=2#SelectedPopupData" class="glassContainer popupDefault" style="top: 35%;">
+        <ui:Label text="Popup Title" name="Label" enabled="true" class="h1" style="margin-bottom: 6px; -unity-font-style: bold; white-space: normal;">
+            <Bindings>
+                <ui:DataBinding property="text" data-source-path="popupData.popupTitle" binding-mode="ToTarget"/>
+            </Bindings>
+        </ui:Label>
+        <ui:Image style="background-image: url(&quot;project://database/Assets/Art/UI/UI%20Popup/ShootingImage.png?fileID=21300000&amp;guid=b244bf98c5ed2b943ab7a7ea941ad38f&amp;type=3#ShootingImage&quot;); margin-bottom: 6px; -unity-background-scale-mode: scale-to-fit; -unity-text-auto-size: none; align-self: center; width: 287px; height: 162px;"/>
+        <ui:Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque faucibus tortor nec vulputate suscipit. Phasellus quis lorem congue, laoreet odio vitae, suscipit ante." name="Label" style="white-space: normal; font-size: 13px; -unity-text-align: upper-left; width: 100%;">
+            <Bindings>
+                <ui:DataBinding property="text" data-source-path="popupData.popupText" binding-mode="ToTarget"/>
+            </Bindings>
+        </ui:Label>
+    </ui:VisualElement>
+    <ui:VisualElement name="PauseContainer" data-source="project://database/Assets/Scriptable%20Objects/Resources/UI/PauseMenuData.asset?fileID=11400000&amp;guid=1cca2555d9c8d144b9f3cf51fd57b5dd&amp;type=2#PauseMenuData" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.45); align-items: center; justify-content: center; visibility: hidden; position: absolute; top: 50%; align-self: center; translate: 0 -50%;">
+        <ui:VisualElement name="PauseMenu" class="purpleContainer glassContainer" style="flex-grow: 0; height: 235px; width: 280px; flex-shrink: 0; align-self: auto; justify-content: space-around;">
+            <ui:Label text="Mission Paused" class="h1" style="font-size: 30px; -unity-text-align: upper-center; margin-bottom: 32px;"/>
+            <ui:Button text="Resume Mission" name="resume-button" style="font-size: 16px;"/>
+            <ui:Button text="Exit Mission" name="mainMenu-button" style="font-size: 16px;"/>
+        </ui:VisualElement>
+        <Bindings>
+            <ui:DataBinding property="style.visibility" data-source-path="visibility" binding-mode="ToTarget"/>
+        </Bindings>
+    </ui:VisualElement>
+    <ui:VisualElement name="HealthContainer" style="flex-grow: 0; width: 324px; height: 70px; bottom: 15px; align-self: auto; flex-direction: column; position: absolute; left: 15px;">
+        <ui:VisualElement name="ShieldBarBG" class="hull-bar-bg shield-bar-bg" style="flex-grow: 1; width: auto; height: auto; flex-direction: row; align-items: center; justify-content: flex-end; background-color: rgb(0, 35, 65); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; border-bottom-left-radius: 0; border-left-color: rgb(32, 137, 255); border-right-color: rgb(32, 137, 255); border-top-color: rgb(32, 137, 255); border-bottom-color: rgb(32, 137, 255); text-overflow: clip; bottom: auto; left: auto; margin-bottom: 15px;">
+            <ui:VisualElement name="ShieldBarChaser" class="shield-bar-fill" style="flex-grow: 1; position: absolute; top: 0; left: 0; bottom: 0; width: 50%; -unity-background-image-tint-color: rgba(0, 0, 0, 0); flex-direction: row; align-items: center; justify-content: flex-end; transition-property: width; transition-duration: 1s; align-self: auto; align-content: auto; background-color: rgb(158, 203, 255); transition-delay: 0.6s; transition-timing-function: ease-out;"/>
+            <ui:Label text="100" name="ShieldValueLight" class="shield-current-value" style="-unity-text-align: upper-center; margin-right: 6px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-left: 0; margin-bottom: 0; margin-top: 0; color: rgb(32, 137, 255); -unity-font-style: bold; font-size: 18px;"/>
+            <ui:VisualElement name="ShieldBarFill" class="shield-bar-fill" style="flex-grow: 1; position: absolute; top: 0; left: 0; bottom: 0; width: 50%; -unity-background-image-tint-color: rgba(0, 0, 0, 0); flex-direction: row; align-items: center; justify-content: flex-end; transition-property: width; transition-duration: 0.2s; align-self: auto; align-content: auto; background-color: rgb(32, 137, 255); overflow: hidden; transition-timing-function: ease-in-out;">
+                <ui:Label text="100" name="ShieldValueDark" class="shield-current-value" style="-unity-text-align: upper-center; margin-right: 6px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-left: 0; margin-bottom: 0; margin-top: 0; color: rgb(0, 35, 65); -unity-font-style: bold; font-size: 18px; position: absolute; left: 280px;"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="HullBarBG" class="hull-bar-bg" style="flex-grow: 1; width: auto; height: auto; flex-direction: row; align-items: center; justify-content: flex-end; background-color: rgb(65, 0, 0); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; border-bottom-left-radius: 0; border-left-color: rgb(255, 32, 41); border-right-color: rgb(255, 32, 41); border-top-color: rgb(255, 32, 41); border-bottom-color: rgb(255, 32, 41); text-overflow: clip; bottom: auto; left: auto;">
+            <ui:VisualElement name="HullBarChaser" class="hull-bar-fill" style="flex-grow: 1; position: absolute; top: 0; left: 0; bottom: 0; width: 50%; -unity-background-image-tint-color: rgba(0, 0, 0, 0); flex-direction: row; align-items: center; justify-content: flex-end; transition-property: width; transition-duration: 1.2s; align-self: auto; align-content: auto; background-color: rgb(255, 179, 182); transition-delay: 0.6s; transition-timing-function: ease-out; overflow: visible;"/>
+            <ui:Label text="500" name="HullValueLight" class="hull-max-value hull-current-value" style="-unity-text-align: upper-center; margin-right: 6px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-left: 0; margin-bottom: 0; margin-top: 0; color: rgb(255, 32, 41); -unity-font-style: bold; font-size: 18px;"/>
+            <ui:VisualElement name="HullBarFill" class="hull-bar-fill" style="flex-grow: 1; position: absolute; top: 0; left: 0; bottom: 0; width: 50%; -unity-background-image-tint-color: rgba(0, 0, 0, 0); flex-direction: row; align-items: center; justify-content: flex-end; transition-property: width; transition-duration: 0.2s; align-self: auto; align-content: auto; background-color: rgb(255, 32, 41); overflow: hidden; transition-timing-function: ease-in-out;">
+                <ui:Label text="500" name="HullValueDark" class="hull-max-value hull-current-value" style="-unity-text-align: upper-center; margin-right: 6px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-left: 0; margin-bottom: 0; margin-top: 0; color: rgb(65, 0, 0); -unity-font-style: bold; font-size: 18px; left: 278px; position: absolute;"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="LoadoutContainer" style="position: absolute; right: 1%; bottom: 2%; height: 33%; width: 24%; justify-content: flex-start;">
+        <ui:Instance template="WeaponContainer" name="Weapon0" class="active-weapon weapon-container" style="height: 33%; margin-bottom: 0%;"/>
+        <ui:Instance template="WeaponContainer" name="Weapon1" class="weapon-container" style="height: 33%; margin-bottom: 0%; margin-top: 10px;"/>
+        <ui:Instance template="WeaponContainer" name="Weapon2" class="weapon-container" style="height: 33%; margin-bottom: 0%; margin-top: 10px;"/>
+    </ui:VisualElement>
+</ui:UXML>
